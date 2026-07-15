@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "profilehub",
+  "version": "${version}",
+
+  "name": "ProfileHub",
+  "description": "",
+  "authors": [],
+  "contact": {},
+
+  "license": "MIT",
+  "icon": "assets/profilehub/icon.png",
+
+  "environment": "client",
+  "entrypoints": {
+    "client": ["org.profilehub.client.ProfilehubClient"],
+    "main": ["org.profilehub.Profilehub"]
+  },
+
+  "mixins": [
+    "profilehub.mixins.json"
+    ,{
+      "config": "profilehub.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
